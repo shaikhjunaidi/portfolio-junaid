@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Shaikh Junaid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1d1d1f;
+            --secondary: #86868b;
+            --accent: #2997ff;
+            --bg: #ffffff;
+            --border: #e5e5ea;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: #f5f5f7;
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--primary);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .resume-wrapper {
+            background: var(--bg);
+            max-width: 800px; /* A4 width proxy */
+            margin: 0 auto;
+            padding: 60px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-radius: 8px;
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header-left h1 {
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+        }
+        .header-left h2 {
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--accent);
+        }
+        .header-right {
+            text-align: right;
+            font-size: 14px;
+            color: var(--secondary);
+        }
+        .header-right a {
+            color: var(--secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+        .header-right a:hover { color: var(--accent); }
+
+        /* SECTIONS */
+        .section { margin-bottom: 35px; }
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary);
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title i { color: var(--accent); }
+
+        /* CONTENT BLOCKS */
+        .summary p {
+            font-size: 15px;
+            color: #333;
+        }
+
+        .item { margin-bottom: 20px; }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .item-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .item-subtitle {
+            font-size: 14px;
+            font-style: italic;
+            color: var(--secondary);
+        }
+        .item-date {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--accent);
+        }
+        .item-details {
+            list-style-type: disc;
+            margin-left: 18px;
+            font-size: 14px;
+            color: #444;
+        }
+        .item-details li { margin-bottom: 4px; }
+
+        /* SKILLS (Grid) */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .skill-group h4 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .skill-list {
+            list-style: none;
+            margin-left: 0;
+            font-size: 14px;
+            color: #444;
+        }
+        .skill-list li {
+            margin-bottom: 4px;
+        }
+
+        /* PRINT STYLES */
+        @media print {
+            body { background: white; padding: 0; -webkit-print-color-adjust: exact; }
+            .resume-wrapper { box-shadow: none; padding: 0; border-radius: 0; max-width: 100%; }
+            .download-btn { display: none !important; }
+        }
+
+        /* FLOATING DOWNLOAD BTN */
+        .download-btn {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            box-shadow: 0 4px 15px rgba(41,151,255,0.4);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(41,151,255,0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#" class="download-btn" onclick="window.print(); return false;">
+        <i class="fas fa-download"></i> Save as PDF
+    </a>
+
+    <div class="resume-wrapper">
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h1>Shaikh Junaid</h1>
+                <h2>Web Developer</h2>
+            </div>
+            <div class="header-right">
+                <a href="mailto:me.junaid.in@gmail.com"><i class="fas fa-envelope"></i> me.junaid.in@gmail.com</a>
+                <a href="https://linkedin.com/in/shaikh-junaid-jd135" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/shaikh-junaid-jd135</a>
+                <a href="https://github.com/shaikhjunaidi" target="_blank"><i class="fab fa-github"></i> github.com/shaikhjunaidi</a>
+                <span><i class="fas fa-map-marker-alt"></i> India</span>
+            </div>
+        </header>
+
+        <!-- Summary -->
+        <section class="section summary">
+            <h3 class="section-title"><i class="fas fa-user-circle"></i> Professional Summary</h3>
+            <p>Passionate BCA student and Web Developer dedicated to bridging the gap between elegant frontend interfaces and robust backend logic. Focused on performance, pixel-perfect design, and highly functional digital experiences. Strong capability in both client-side interactivity and database/server operations.</p>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+            <h3 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Bachelor of Computer Applications (BCA)</span>
+                    <span class="item-date">Graduating Soon</span>
+                </div>
+                <div class="item-subtitle">Pursuing</div>
+                <ul class="item-details">
+                    <li>Focus on full-stack software development, database administration, and modern web technologies.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section">
+            <h3 class="section-title"><i class="fas fa-code"></i> Technical Projects</h3>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Student Result Management System</span>
+                    <span class="item-subtitle">Node.js, Express, MySQL</span>
+                </div>
+                <ul class="item-details">
+                    <li>Developed a complete, secure role-based management system for academic institutions.</li>
+                    <li>Implemented secure authentication protocols and CRUD operations for managing student academic records.</li>
+                    <li>Designed robust relational database schemas using MySQL to ensure data integrity and rapid retrieval.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Advanced Interactive Calculator</span>
+                    <span class="item-subtitle">HTML5, CSS3, JavaScript ES6+</span>
+                </div>
+                <ul class="item-details">
+                    <li>Built a smart, elegant mathematical tool supporting basic operations and scientific computations.</li>
+                    <li>Integrated full keyboard accessibility and a session history tracking system.</li>
+                    <li>Engineered a dynamic dark mode UI utilizing modern CSS variables and transitions.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Memory Puzzle Application</span>
+                    <span class="item-subtitle">JavaScript, DOM Manipulation, CSS Grid</span>
+                </div>
+                <ul class="item-details">
+                    <li>Created a logic-heavy interactive memory game featuring dynamic difficulty scaling.</li>
+                    <li>Programmed complex internal states including a custom timer and move counters.</li>
+                    <li>Leveraged browser Local Storage integration to maintain and display high scores persistently.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section">
+            <h3 class="section-title"><i class="fas fa-tools"></i> Core Skills & Technologies</h3>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h4>Frontend Development</h4>
+                    <ul class="skill-list">
+                        <li>HTML5 & Semantic UI</li>
+                        <li>CSS3 / Grid / Flexbox</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>CSS Animations (GSAP)</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h4>Backend Development</h4>
+                    <ul class="skill-list">
+                        <li>Node.js</li>
+                        <li>Express.js Framework</li>
+                        <li>PHP</li>
+                        <li>RESTful API Design</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h4>Database & Tooling</h4>
+                    <ul class="skill-list">
+                        <li>MySQL Relational DB</li>
+                        <li>Git & GitHub Version Control</li>
+                        <li>Responsive UI Patterns</li>
+                        <li>Cross-browser Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="section">
+            <h3 class="section-title"><i class="fas fa-certificate"></i> Certifications & Achievements</h3>
+            <div class="item" style="margin-bottom: 12px;">
+                <div class="item-header">
+                    <span class="item-title">Full Stack Java Development</span>
+                    <span class="item-subtitle">Simplilearn SkillUp</span>
+                </div>
+            </div>
+            <div class="item" style="margin-bottom: 12px;">
+                <div class="item-header">
+                    <span class="item-title">Introduction to HTML Validation</span>
+                    <span class="item-subtitle">Simplilearn SkillUp</span>
+                </div>
+            </div>
+            <div class="item" style="margin-bottom: 0;">
+                <div class="item-header">
+                    <span class="item-title">Brain Storming Technical Coding Participant</span>
+                    <span class="item-subtitle">IEEE Student Branch</span>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

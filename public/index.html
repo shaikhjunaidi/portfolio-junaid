@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaikh Junaid | Web Developer</title>
+
+    <!-- SEO & Open Graph Tags -->
+    <meta name="description" content="Shaikh Junaid - BCA Student and Web Developer. Building real-world web apps with clean interfaces and powerful backends.">
+    <meta property="og:title" content="Shaikh Junaid | Portfolio">
+    <meta property="og:description" content="Explore my portfolio showcasing logic meeting design across frontend and backend applications.">
+    <meta property="og:image" content="calc_mockup.png">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Google Fonts: Inter for Apple-like typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Ambient Aurora Background -->
+    <div class="aurora-bg">
+        <div class="aurora-1"></div>
+        <div class="aurora-2"></div>
+        <div class="aurora-3"></div>
+    </div>
+
+    <!-- Apple-style Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">Junaid<span style="color:var(--accent)">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home"><i class="fa-solid fa-house"></i> Overview</a></li>
+                <li><a href="#about"><i class="fa-solid fa-user-astronaut"></i> About</a></li>
+                <li><a href="#skills"><i class="fa-solid fa-microchip"></i> Tech Specs</a></li>
+                <li><a href="#projects"><i class="fa-solid fa-laptop-code"></i> Projects</a></li>
+                <li><a href="#certificates"><i class="fa-solid fa-certificate"></i> Certificates</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope-open-text"></i> Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme"
+                    style="width: 36px; height: 36px; font-size: 14px;">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <h2 class="hero-greeting gs-reveal">Hello, I'm</h2>
+            <h1 class="hero-title gs-reveal gs-delay-1">Shaikh Junaid.</h1>
+            <h2 class="hero-role gs-reveal gs-delay-2">Web Developer.</h2>
+            <p class="hero-tagline gs-reveal gs-delay-3">Logic meets design. Building real-world web apps with clean
+                interfaces and powerful backends.</p>
+            <div class="hero-buttons gs-reveal gs-delay-4">
+                <a href="resume.html" target="_blank" class="btn btn-primary btn-round"
+                    style="background: var(--accent); color: white;">View Resume</a>
+                <a href="#projects" class="btn btn-primary btn-round">View Projects</a>
+                <a href="#contact" class="btn btn-link">Contact Me <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+
+        <div class="hero-image-wrapper gs-reveal gs-delay-5" id="hero-img-wrapper">
+            <div class="profile-glow"></div>
+            <img src="junaid_profile.jpg" alt="Shaikh Junaid" class="profile-img">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about padding-section">
+        <div class="container section-reveal">
+            <h2 class="section-heading">About.</h2>
+            <h3 class="section-subheading">Passionate about <br><span class="text-gradient">perfection.</span></h3>
+
+            <div class="about-grid">
+                <!-- Added Portrait to About Section -->
+                <div class="about-image-wrapper section-reveal glass-card"
+                    style="padding: 0; overflow: hidden; display: flex;">
+                    <img src="junaid_profile.jpg" alt="Shaikh Junaid" class="about-profile-img">
+                </div>
+
+                <div class="about-text glass-card section-reveal">
+                    <p>I am <strong>Shaikh Junaid</strong>, a BCA student and web developer dedicated to bridging
+                        the gap between elegant frontend interfaces and robust backend logic.</p>
+                    <p>With a focus on performance and pixel-perfect design, my goal is to craft digital experiences
+                        that are beautiful, intuitive, and highly functional. From optimizing database queries to
+                        fine-tuning CSS animations, I care about every detail.</p>
+                </div>
+                <div class="about-stats section-reveal">
+                    <div class="stat-box glass-card">
+                        <i class="fas fa-graduation-cap stat-icon"></i>
+                        <h3>Education</h3>
+                        <p>BCA Student</p>
+                    </div>
+                    <div class="stat-box glass-card">
+                        <i class="fas fa-laptop-code stat-icon"></i>
+                        <h3>Focus</h3>
+                        <p>Web & Mobile Apps</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills padding-section">
+        <div class="container section-reveal">
+            <h2 class="section-heading text-center">Tech Specs.</h2>
+            <p class="section-description text-center">The tools I use to bring ideas to life.</p>
+
+            <div class="skills-grid">
+                <div class="skill-category glass-card">
+                    <div class="cat-icon-wrapper"><i class="fas fa-code"></i></div>
+                    <h3>Frontend</h3>
+                    <ul class="skill-list">
+                        <li><span>HTML5</span>
+                            <div class="skill-bar">
+                                <div class="fill html" style="width: 95%;"></div>
+                            </div>
+                        </li>
+                        <li><span>CSS3 / Animations</span>
+                            <div class="skill-bar">
+                                <div class="fill css" style="width: 90%;"></div>
+                            </div>
+                        </li>
+                        <li><span>JavaScript (ES6+)</span>
+                            <div class="skill-bar">
+                                <div class="fill js" style="width: 85%;"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <div class="cat-icon-wrapper"><i class="fas fa-server"></i></div>
+                    <h3>Backend</h3>
+                    <ul class="skill-list">
+                        <li><span>Node.js</span>
+                            <div class="skill-bar">
+                                <div class="fill node" style="width: 80%;"></div>
+                            </div>
+                        </li>
+                        <li><span>Express.js</span>
+                            <div class="skill-bar">
+                                <div class="fill express" style="width: 85%;"></div>
+                            </div>
+                        </li>
+                        <li><span>PHP</span>
+                            <div class="skill-bar">
+                                <div class="fill php" style="width: 75%;"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <div class="cat-icon-wrapper"><i class="fas fa-database"></i></div>
+                    <h3>Database & Tools</h3>
+                    <ul class="skill-list">
+                        <li><span>MySQL</span>
+                            <div class="skill-bar">
+                                <div class="fill sql" style="width: 85%;"></div>
+                            </div>
+                        </li>
+                        <li><span>Git & GitHub</span>
+                            <div class="skill-bar">
+                                <div class="fill git" style="width: 90%;"></div>
+                            </div>
+                        </li>
+                        <li><span>API Design</span>
+                            <div class="skill-bar">
+                                <div class="fill api" style="width: 80%;"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects padding-section theme-alt">
+        <div class="container">
+            <h2 class="section-heading text-center section-reveal">Projects.</h2>
+            <p class="section-description text-center section-reveal">A selection of my recent work.</p>
+
+            <div class="project-showcase">
+
+                <!-- Project 1 -->
+                <div class="project-row section-reveal">
+                    <div class="project-info">
+                        <span class="project-eyebrow">Web App</span>
+                        <h3>Advanced Calculator</h3>
+                        <p>A smart, elegant calculator supporting basic operations, scientific functions, and full
+                            keyboard accessibility. Complete with a beautiful dark mode UI and session history tracking.
+                        </p>
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="calculator.html" class="btn btn-primary btn-round" target="_blank">Live Demo</a>
+                            <a href="https://github.com/shaikhjunaidi/advanced-calculator" target="_blank" class="btn btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-visual glass-card">
+                        <img src="calc_mockup.png" alt="Advanced Calculator UI">
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-row reverse section-reveal">
+                    <div class="project-info">
+                        <span class="project-eyebrow">Interactive Game</span>
+                        <h3>Memory Puzzle</h3>
+                        <p>A logic-heavy interactive memory game featuring dynamic difficulty levels, a custom timer,
+                            move counters, and local storage integration for high scores.</p>
+                        <div class="tech-stack">
+                            <span>JavaScript</span>
+                            <span>DOM Manipulation</span>
+                            <span>CSS Animations</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="puzzle.html" class="btn btn-primary btn-round" target="_blank">Play Game</a>
+                            <a href="https://github.com/shaikhjunaidi/memory-puzzle" target="_blank" class="btn btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-visual glass-card">
+                        <img src="puzzle_mockup.png" alt="Memory Puzzle Game Interface">
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-row section-reveal">
+                    <div class="project-info">
+                        <span class="project-eyebrow">Full Stack System</span>
+                        <h3>Student Result System</h3>
+                        <p>A complete, secure role-based management system. Features include secure authentication, CRUD
+                            operations for academic records, and robust MySQL database integration.</p>
+                        <div class="tech-stack">
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://student-result-system-j8ca.onrender.com/" class="btn btn-primary btn-round"
+                                target="_blank">Live Demo</a>
+                            <a href="https://github.com/shaikhjunaidi" target="_blank" class="btn btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-visual glass-card">
+                        <img src="student_mockup.png" alt="Student Result Management Dashboard">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates padding-section">
+        <div class="container">
+            <h2 class="section-heading text-center section-reveal">Certifications.</h2>
+            <p class="section-description text-center section-reveal">Professional growth and achievements.</p>
+
+            <div class="certificates-grid section-reveal">
+                <!-- Certificate 1 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-image">
+                        <img src="cert_java.jpg" alt="Full Stack Java Development">
+                    </div>
+                    <div class="cert-info">
+                        <h3>Full Stack Java Development</h3>
+                        <p>Simplilearn SkillUp</p>
+                    </div>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-image">
+                        <img src="cert_html.jpg" alt="Introduction to HTML">
+                    </div>
+                    <div class="cert-info">
+                        <h3>Introduction to HTML</h3>
+                        <p>Simplilearn SkillUp</p>
+                    </div>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-image">
+                        <img src="cert_ieee.jpg" alt="IEEE Brain Storming Competition">
+                    </div>
+                    <div class="cert-info">
+                        <h3>Brain Storming Technical Coding</h3>
+                        <p>IEEE Student Branch Completion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact padding-section theme-alt">
+        <div class="container section-reveal">
+            <h2 class="section-heading text-center">Get in Touch.</h2>
+            <p class="section-description text-center">Let's build something extraordinary together.</p>
+
+            <div class="contact-box glass-card">
+                <div class="contact-left">
+                    <h3>Contact Info</h3>
+                    <p>Open for opportunities, collaborations, or just a quick chat.</p>
+
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>me.junaid.in@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bengaluru , Karnataka, India</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links-apple">
+                        <a href="https://www.linkedin.com/in/shaikh-junaid-jd135?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                            target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/shaikhjunaidi" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <form id="contact-form" class="apple-form">
+                        <div class="input-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-round" id="submit-btn"
+                            style="margin-top: 10px;">
+                            Send Message
+                        </button>
+                        <div id="form-status" class="form-status-msg"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <a href="#" class="logo">Junaid<span style="color:var(--accent)">.</span></a>
+                <p>Designed with clean code and high ambitions.</p>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; 2026 Shaikh Junaid. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- GSAP for Apple-like Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

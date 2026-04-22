@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Puzzle Game | Shaikh Junaid</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="puzzle.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Memory Puzzle</h1>
+            <div class="stats">
+                <div class="stat-box">
+                    <i class="fas fa-stopwatch"></i> <span id="time">00:00</span>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-shoe-prints"></i> Moves: <span id="moves">0</span>
+                </div>
+            </div>
+            <div class="controls">
+                <select id="difficulty">
+                    <option value="easy">Easy (4x4)</option>
+                    <option value="medium">Medium (6x6)</option>
+                    <option value="hard">Hard (8x8)</option>
+                </select>
+                <button id="restart-btn" class="btn"><i class="fas fa-redo"></i> Restart</button>
+            </div>
+        </header>
+
+        <main class="board-container">
+            <div id="game-board" class="game-board easy"></div>
+        </main>
+
+        <div class="high-scores">
+            <h3><i class="fas fa-trophy text-gold"></i> High Scores (Fewest Moves)</h3>
+            <div class="score-grid">
+                <div class="score-card">
+                    <h4>Easy</h4>
+                    <span id="score-easy">-</span>
+                </div>
+                <div class="score-card">
+                    <h4>Medium</h4>
+                    <span id="score-medium">-</span>
+                </div>
+                <div class="score-card">
+                    <h4>Hard</h4>
+                    <span id="score-hard">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Win Modal -->
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <h2>You Won! 🎉</h2>
+            <p>Time: <span id="win-time">00:00</span></p>
+            <p>Moves: <span id="win-moves">0</span></p>
+            <p id="new-highscore-msg" style="display:none; color: #10b981; font-weight: bold; margin-top: 10px;">New High Score!</p>
+            <button id="play-again-btn" class="btn btn-primary" style="margin-top: 20px;">Play Again</button>
+        </div>
+    </div>
+
+    <script src="puzzle.js"></script>
+</body>
+</html>
