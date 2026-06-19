@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'client', 'dist')));
 
 // Rate Limiting for Contact Route
 const contactLimiter = rateLimit({
@@ -21,7 +21,7 @@ const contactLimiter = rateLimit({
 });
 
 // Contact Route
-app.post('/contact', contactLimiter, async (req, res) => {
+app.post('/api/contact', contactLimiter, async (req, res) => {
     const { name, email, message } = req.body;
 
     if (!name || !email || !message) {
@@ -54,6 +54,11 @@ app.post('/contact', contactLimiter, async (req, res) => {
         console.error('Error sending email:', error);
         res.status(500).json({ error: 'Failed to send message. Please try again later.' });
     }
+});
+
+// Catch-all route to serve React App
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
 });
 
 // Start Server
